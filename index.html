@@ -7,8 +7,8 @@
 
   <body>
     <div id="app" :class="{clicked : isClicked}">
-      <div id="formBackground" :class="{clicked : isClicked}">
-        <h1 class="title">{{ title }}</h1>
+      <div id="formBackground" >
+        <h1 class="title" :class="{white: isWhite}" >{{ title }}</h1>
         <form >
           <input type="text" placeholder="How can I help you ?" />
           <button type="submit">Submit</button>

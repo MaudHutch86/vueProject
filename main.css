@@ -19,6 +19,10 @@
   padding-bottom: 50px;
 }
 
+.title.white{
+  color: white;
+}
+
 form {
   display: flex;
   flex-direction: column;
