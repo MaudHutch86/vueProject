@@ -1,24 +1,23 @@
-<!DOCTYPE>
+<!DOCTYPE >
 <html>
+  <head>
+    <title>VueJS Course</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
 
-<head>
-  <title>VueJS Course</title>
-  <link rel="stylesheet" type="text/css" href="main.css" />
-</head>
-
-<body>
-  <div id="app">
-    <label>
-      <input type="checkbox" /> Purple
-    </label>
-
-    <div class="circle">
-      Hi!
+  <body>
+    <div id="app" :class="{clicked : isClicked}">
+      <div id="formBackground" :class="{clicked : isClicked}">
+        <h1 class="title">{{ title }}</h1>
+        <form >
+          <input type="text" placeholder="How can I help you ?" />
+          <button type="submit">Submit</button>
+        </form>
+        <button class="round-button" @click=' toggleBackgroundColor'>+</button>
+      </div>
     </div>
-  </div>
 
-  <script src="https://unpkg.com/vue@next"></script>
-  <script src="app.js"></script>
-</body>
-
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
