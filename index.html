@@ -9,11 +9,13 @@
     <div id="app" :class="{clicked : isClicked}">
       <div id="formBackground" >
         <h1 class="title" :class="{white: isWhite}" >{{ title }}</h1>
-        <form >
+        <form v-if="isSubmit == false" >
           <input type="text" placeholder="How can I help you ?" />
-          <button type="submit">Submit</button>
+          <button type="submit" @click.prevent="toggleSubmit">Submit</button>
         </form>
-        <button class="round-button" @click=' toggleBackgroundColor'>+</button>
+         <p id="answerBox" v-if="isSubmit == true">{{text}}</p>
+        <button id="newQuestionButton" v-if="isSubmit == true" @click="askNewQuestion">Ask a new question</button>
+        <button class="round-button" @click.prevent=' toggleBackgroundColor'>+</button>
       </div>
     </div>
 

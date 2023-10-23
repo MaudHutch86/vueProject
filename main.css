@@ -58,3 +58,19 @@ input, button {
   background-color: #45a049; /* Changes color on hover */
 }
 
+#answerBox{
+  display: block;
+  margin-left:30px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  
+}
+#newQuestionButton{
+  height: 70px;
+  width: 400px;
+  display: block;
+  margin: auto;
+  background-color: rgb(66, 66, 242);
+}
+
+
